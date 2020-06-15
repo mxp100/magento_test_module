@@ -8,6 +8,7 @@
     </route>
     <route method="GET" url="/V1/customers/{customerId}">
         <service class="Mxp100\TestModule\Api\CustomerFakedInterface" method="get"/>
+<!--        такого интерфейса не существет, соответственно это и не работает-->
         <resources>
             <resource ref="Magento_Customer::group"/>
         </resources>
