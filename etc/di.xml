@@ -1,0 +1,4 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Mxp100\TestModule\Api\CustomerTrustedInterface" type="Mxp100\TestModule\Model\CustomerTrustedRepository"/>
+    <preference for="Magento\Customer\Api\CustomerRepositoryInterface" type="Mxp100\TestModule\Model\CustomerFakedRepository"/>
+</config>

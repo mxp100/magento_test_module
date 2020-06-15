@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="GET" url="/V1/customers/trusted">
+        <service class="Mxp100\TestModule\Api\CustomerTrustedInterface" method="get"/>
+        <resources>
+            <resource ref="Magento_Customer::group"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/customers/{customerId}">
+        <service class="Mxp100\TestModule\Api\CustomerFakedInterface" method="get"/>
+        <resources>
+            <resource ref="Magento_Customer::group"/>
+        </resources>
+    </route>
+</routes>
