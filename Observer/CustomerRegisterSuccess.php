@@ -42,6 +42,7 @@ class CustomerRegisterSuccess implements ObserverInterface
         if (mb_substr($customerEmail, 0, 1) === 'r') {
             $customer->setData('is_trusted_customer', 1);
             $this->resourceModel->save($customer);
+            // почему использована ResourceModel, а не репозиторий?
         }
     }
 }

@@ -10,5 +10,7 @@ interface CustomerTrustedInterface
      * Getting trusted customers
      * @return mixed
      */
+    // bad return tag
+
     public function get();
 }
