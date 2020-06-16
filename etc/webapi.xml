@@ -6,10 +6,4 @@
             <resource ref="Magento_Customer::group"/>
         </resources>
     </route>
-    <route method="GET" url="/V1/customers/{customerId}">
-        <service class="Mxp100\TestModule\Api\CustomerFakedInterface" method="get"/>
-        <resources>
-            <resource ref="Magento_Customer::group"/>
-        </resources>
-    </route>
 </routes>
