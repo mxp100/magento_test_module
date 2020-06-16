@@ -8,7 +8,7 @@ interface CustomerTrustedInterface
 {
     /**
      * Getting trusted customers
-     * @return mixed
+     * @return array
      */
     public function get();
 }

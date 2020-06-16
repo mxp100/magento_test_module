@@ -3,7 +3,7 @@
 namespace Mxp100\TestModule\Model;
 
 use Magento\Customer\Model\ResourceModel\Customer\Collection as CustomerCollection;
-use Magento\Framework\App\ObjectManager;
+use Magento\Customer\Model\ResourceModel\Customer\Collection\Interceptor;
 use Magento\Framework\ObjectManagerInterface;
 use Mxp100\TestModule\Api\CustomerTrustedInterface;
 
@@ -25,9 +25,10 @@ class CustomerTrustedRepository implements CustomerTrustedInterface
     {
 
         $customerObj = $this->objectManager->create(CustomerCollection::class);
-        $customer = $customerObj->addAttributeToSelect('*')
+        /** @var Interceptor $customer */
+        $customer = $customerObj
             ->addAttributeToFilter('is_trusted_customer', 1)
             ->load();
-        return $customer->getData();
+        return $customer->getAllIds();
     }
 }
