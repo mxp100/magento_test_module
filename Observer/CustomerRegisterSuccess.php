@@ -3,6 +3,7 @@
 namespace Mxp100\TestModule\Observer;
 
 use Magento\Customer\Model\Customer;
+use Magento\Customer\Model\ResourceModel\Customer as CustomerResourceModel;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\Exception\AlreadyExistsException;
@@ -19,10 +20,10 @@ class CustomerRegisterSuccess implements ObserverInterface
 
     /**
      * CustomerRegisterSuccess constructor.
-     * @param \Magento\Customer\Model\ResourceModel\Customer $resourceModel
+     * @param CustomerResourceModel $resourceModel
      */
     public function __construct(
-        \Magento\Customer\Model\ResourceModel\Customer $resourceModel
+        CustomerResourceModel $resourceModel
     ) {
         $this->resourceModel = $resourceModel;
     }
